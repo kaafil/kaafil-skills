@@ -1,0 +1,44 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # The sandbox installs the EXACT published kaafil-js and
+      # kaafil-react-uikit. Fences are compiled against what a real
+      # integrator gets, not against a sibling checkout carrying
+      # unreleased work.
+      - name: Install the published packages
+        run: npm run sandbox:install
+
+      - name: Static integrity
+        run: npm run verify
+
+      # Fails if the committed catalogs drift from the installed packages,
+      # then asserts every symbol named in prose still exists. A package
+      # release that renames an export lands here as a clear failure
+      # naming the skill that still teaches the old name.
+      - name: Symbols exist
+        run: npm run verify:catalog
+
+      - name: Fences typecheck
+        run: npm run verify:fences
+
+  # Deliberately NOT part of the gate: it drives a real model, costs
+  # tokens, and is non-deterministic. Run it before a release, and run the
+  # --baseline arm with it — a treatment-only result cannot distinguish
+  # "the skills work" from "the model already knew".
+  #
+  #   npm run test:eval
+  #   bash test-suite/scripts/run-eval.sh --baseline
