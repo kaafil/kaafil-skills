@@ -1,0 +1,37 @@
+{
+  "$schema": "https://code.claude.com/schemas/marketplace.json",
+  "name": "kaafil",
+  "description": "Kaafil AI-coding skills — teach your agent to integrate the kaafil-js SDK and the kaafil-react-uikit React components correctly, including the rules that invert the obvious default.",
+  "owner": {
+    "name": "Kaafil",
+    "email": "support@kaafil.in"
+  },
+  "plugins": [
+    {
+      "name": "kaafil-skills",
+      "source": ".",
+      "skills": "./skills",
+      "strict": false,
+      "description": "21 skills covering the whole Kaafil integration — the React UI Kit's three persona surfaces, the browser and server halves of kaafil-js, and the backend lane that ingests trips and mints sessions. The /kaafil dispatcher detects your project, works out which persona you are building for, and routes. Every code sample is typechecked against the published packages in CI.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Kaafil"
+      },
+      "homepage": "https://developer.kaafil.in",
+      "repository": "https://github.com/kaafil/kaafil-skills",
+      "license": "MIT",
+      "keywords": [
+        "kaafil",
+        "travel",
+        "group-travel",
+        "trips",
+        "react",
+        "ui-kit",
+        "sdk",
+        "offline-first",
+        "ai-agent"
+      ],
+      "category": "productivity"
+    }
+  ]
+}

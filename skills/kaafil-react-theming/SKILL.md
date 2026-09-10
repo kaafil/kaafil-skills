@@ -100,15 +100,19 @@ make it tighter; set the density.
 
 ## Per-instance overrides — the `style` prop
 
-Every component takes `style`, typed as `KaafilTokenOverrides`. It accepts
-`--kf-*` custom properties, so you can restyle one mounted instance
-without a stylesheet at all:
+Every component takes a `style` prop that accepts `--kf-*` custom
+properties, so you can restyle one mounted instance without a stylesheet
+at all:
 
 ```tsx
 import { KaafilAgencyWorkspace } from 'kaafil-react-uikit/admin';
 
 <KaafilAgencyWorkspace style={{ '--kf-accent': '#7c3aed' }} />;
 ```
+
+Its type is internal to the package and not exported, so annotate with
+`React.CSSProperties` if you need to hoist the object into a variable —
+do not try to `import type` the kit's own name for it.
 
 Use this for genuinely local variation — one panel in a different accent
 because it sits on a coloured background. For a whole-app brand, use the

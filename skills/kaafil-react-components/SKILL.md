@@ -101,8 +101,8 @@ only the markup you actually care about.
 
 ## Every component takes `style`
 
-Typed as `KaafilTokenOverrides` — `--kf-*` custom properties for
-per-instance theming. See `kaafil-react-theming`.
+It accepts `--kf-*` custom properties for per-instance theming. The type
+itself is internal and not exported. See `kaafil-react-theming`.
 
 ## A component lives in exactly one family
 

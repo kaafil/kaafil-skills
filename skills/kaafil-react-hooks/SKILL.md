@@ -112,7 +112,7 @@ slow. Branch on `undefined` explicitly and render nothing until you know.
   `kaafil-react-offline`.
 - `usePaginatedList(...)` — cursor pagination.
 - Domain hooks — `useRooming`, `useItinerary`, `useExpenses`,
-  `useManifest`-shaped reads, `useManagerMe`, `useAgencyTrips`, and so on.
+  `useManagerMe`, `useAgencyTrips`, `useAgencyTripManifest`, and so on.
 
 ## Writes
 
@@ -149,6 +149,7 @@ manager family, prefer `useOfflineMutation`.
 - **Never pass `idempotencyKey` to a hook.**
 - **Never add React Query, SWR, Redux or any cache in front of these.**
   There is one sync engine; a second one guarantees divergence.
-- **Never build `useManagerX` / `useAdminX` variants.** One hook per
-  domain, keyed by the credential.
+- **Never build per-family hook variants** — no manager-flavoured and
+  admin-flavoured copy of one domain hook. One hook per domain, keyed by
+  the credential.
 - **Never render an empty state without checking `syncedAt`.**
