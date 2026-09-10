@@ -104,15 +104,46 @@ same as *off*. Defaulting it makes a feature flicker off during load and,
 worse, silently disables a feature the agency paid for whenever config is
 slow. Branch on `undefined` explicitly and render nothing until you know.
 
-## Reads
+## Reads — two shapes, and they are not interchangeable
 
-- `useSnapshotList(tripRef, listName)` / `useSnapshotEntity(...)` — the
-  offline lane. Returns `{ rows, syncedAt, refreshLive }`. **Check
-  `syncedAt` before rendering an empty state** — see
-  `kaafil-react-offline`.
-- `usePaginatedList(...)` — cursor pagination.
-- Domain hooks — `useRooming`, `useItinerary`, `useExpenses`,
-  `useManagerMe`, `useAgencyTrips`, `useAgencyTripManifest`, and so on.
+Which one you get decides how you render an empty state, so check the
+hook's return type before assuming.
+
+### Snapshot hooks — `{ rows, syncedAt, refreshLive }`
+
+`useSnapshotList(tripRef, listName)` and `useSnapshotEntity(...)`. There
+is **no status field**: a failed read still returns normally with
+`rows: []`.
+
+The discriminator is `syncedAt`. `undefined` means *never synced on this
+device* — unknown, not empty.
+
+### Domain hooks — a discriminated union on `status`
+
+`useParties`, `useRooming`, `useItinerary`, `useExpenses`, `useCloseout`,
+`usePickups`, `useSeating`, `useNotifications`, `useManagerMe`,
+`useManagerToday`, `useAgencyTrips` and the rest.
+
+`status` is `'loading' | 'error' | 'ready'`, and for most of them also
+`'dark'` when the agency has not enabled that capability. Narrow on
+`status` first; the data is only present on the ready branch.
+
+Inside a ready result, a list still distinguishes "loaded once" from
+"never loaded" — `useParties`' `list` and `tripRoster` each carry their
+own loaded/`lastFetchFailed` state, because the contract is "loaded once,
+stay usable" rather than dropping back to a spinner on a later refresh
+failure.
+
+### The rule that spans both
+
+**Never render "there is nothing here" without first proving you looked.**
+The field that proves it differs by hook — `syncedAt` on a snapshot read,
+`status`/loaded state on a domain hook — but the failure is the same one:
+telling a manager at a bus door that a trip has no travellers when the
+truth is that this device has never seen them.
+
+`usePaginatedList(...)` covers cursor pagination; see
+`kaafil-js-pagination`.
 
 ## Writes
 
@@ -152,4 +183,5 @@ manager family, prefer `useOfflineMutation`.
 - **Never build per-family hook variants** — no manager-flavoured and
   admin-flavoured copy of one domain hook. One hook per domain, keyed by
   the credential.
-- **Never render an empty state without checking `syncedAt`.**
+- **Never render an empty state without proving you looked** —
+  `syncedAt` on a snapshot read, `status`/loaded on a domain hook.

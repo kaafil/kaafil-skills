@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+
+    // A real Vite app has these. Without them `import.meta.env` is a type
+    // error, so an agent that correctly reads config from the environment
+    // fails the typecheck for a reason that has nothing to do with Kaafil.
+    "types": ["vite/client"]
+  },
+  "include": ["src"]
+}

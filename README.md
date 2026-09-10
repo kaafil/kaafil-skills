@@ -118,9 +118,42 @@ This is not theoretical. The harness caught five errors in the first skill
 written against it, including `.data` on a response type that has no `.data`
 and a `shareTokens.mint` that is really `.create`.
 
-There is also an end-to-end evaluation that drives a real agent against a
-fresh app and builds the result — `npm run test:eval`. It needs an API key,
-so it is opt-in.
+### The end-to-end eval, and what it actually showed
+
+`npm run test:eval` drives a real agent against a fresh Vite app across five
+cases — mount the console, the offline-first field app, a traveller share
+page, an empty-state component, and a request to build something that
+should be refused — then typechecks the result and greps it for
+NEVER-rule violations.
+
+```bash
+npm run test:eval                    # all five, with skills installed
+bash test-suite/scripts/run-eval.sh --baseline   # the control: no skills
+```
+
+**Both arms currently score 5/5.** That is worth stating plainly rather
+than hiding: on these five tasks, a strong model with the packages
+installed did not need the skills to get them right. The reason is that
+`kaafil-js` and `kaafil-react-uikit` ship unusually rich TSDoc — the
+storage adapter's own docs say to scope it per person and that it fails at
+open rather than at write — and a capable agent reads the installed types.
+
+So the honest claim is narrower than "these skills make integrations
+work":
+
+- They are **verified accurate**, which is not free — the harness caught
+  eight real errors while they were being written, including `.data` on a
+  response type that has none and a `shareTokens.mint` that is really
+  `.create`.
+- They **route**, and they point every agent at the docs MCP, which
+  matters most for the long tail these five cases do not cover.
+- The `--baseline` arm exists precisely so this stays measurable. If a
+  future model regresses, or a smaller one is used, the gap will show up
+  here instead of in someone's production integration.
+
+Keep the control in the loop when adding cases. A suite that only ever
+runs the treatment arm cannot tell "our skills are good" from "the model
+already knew".
 
 ## Contributing
 
