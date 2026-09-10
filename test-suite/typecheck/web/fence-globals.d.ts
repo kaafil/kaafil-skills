@@ -29,6 +29,8 @@ declare const agencyAdminRef: string;
 // ── the host's own plumbing, whatever it happens to be ──────────────────────
 declare const router: { push: (href: string) => void; replace: (href: string) => void };
 declare const analytics: { track: (event: string, payload?: Record<string, unknown>) => void };
+/** Stands in for "whatever Kaafil call this example is about". */
+declare function doSomething(): Promise<unknown>;
 declare function mintTokens(): Promise<{
   accessToken: string;
   refreshToken: string;
