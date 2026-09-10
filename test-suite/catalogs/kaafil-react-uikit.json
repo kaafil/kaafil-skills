@@ -1,0 +1,1509 @@
+{
+  "package": "kaafil-react-uikit",
+  "version": "0.1.0-beta.1",
+  "generatedBy": "test-suite/scripts/build-catalog.mjs",
+  "subpaths": {
+    "kaafil-react-uikit/core": {
+      "CapabilityRow": "interface",
+      "ChecklistsReady": "interface",
+      "DarkReason": "type",
+      "ERROR_HANDLING_PATH": "const",
+      "ErrorHandlingPath": "type",
+      "ExpensesReady": "interface",
+      "FilesContext": "interface",
+      "FilesReady": "interface",
+      "FloatReady": "interface",
+      "FormsReady": "interface",
+      "ItineraryReady": "interface",
+      "RoomingReady": "interface",
+      "RoomingUnassignedPool": "interface",
+      "VendorsReady": "interface",
+      "classifyError": "function",
+      "useChecklists": "function",
+      "useExpenses": "function",
+      "useFiles": "function",
+      "useFloat": "function",
+      "useForms": "function",
+      "useItinerary": "function",
+      "useRooming": "function",
+      "useVendors": "function",
+      "AgencyTripFilters": "type",
+      "AgencyTripSegmentCounts": "interface",
+      "ManagerAgencyProfileResponse": "type",
+      "TripManifestFacets": "interface",
+      "TripManifestFilters": "type",
+      "UnsatisfiableSchemeError": "class",
+      "AgencyChecklistTemplatesReady": "interface",
+      "AgencyFormsReady": "interface",
+      "AgencyJourneyTriggersReady": "interface",
+      "AgencySettingsDocument": "type",
+      "AgencySettingsReady": "interface",
+      "AgencyTripManifestResult": "interface",
+      "AgencyTripRead": "type",
+      "AgencyTripResult": "interface",
+      "AgencyTripRow": "type",
+      "AgencyTripsResult": "interface",
+      "BindingRow": "type",
+      "ChecklistTemplateItemRow": "type",
+      "ChecklistTemplateRow": "type",
+      "CloneFormInput": "type",
+      "CollectionsReady": "interface",
+      "CreateFormFieldInput": "type",
+      "CreateFormInput": "type",
+      "CreateFormSectionInput": "type",
+      "DeleteFormFieldInput": "type",
+      "DeleteFormInput": "type",
+      "DeleteFormSectionInput": "type",
+      "DirectoriesReady": "interface",
+      "FormDetailRow": "type",
+      "FormFieldRow": "type",
+      "FormRow": "type",
+      "FormSectionRow": "type",
+      "FormSummaryRow": "type",
+      "JourneyTriggerRow": "type",
+      "PaginatedListFetch": "type",
+      "PaginatedListFetchResult": "interface",
+      "PaginatedListOptions": "interface",
+      "PaginatedListResult": "interface",
+      "PatchAgencySettingsInput": "type",
+      "PatchFormFieldInput": "type",
+      "PatchFormInput": "type",
+      "PatchFormSectionInput": "type",
+      "PatchJourneyTriggerInput": "type",
+      "ReorderFormInput": "type",
+      "TripManifestRow": "type",
+      "useAgencyChecklistTemplates": "function",
+      "useAgencyForms": "function",
+      "useAgencyJourneyTriggers": "function",
+      "useAgencySettings": "function",
+      "useAgencyTrip": "function",
+      "useAgencyTripManifest": "function",
+      "useAgencyTrips": "function",
+      "useCollections": "function",
+      "useDirectories": "function",
+      "useKaafilClient": "function",
+      "usePaginatedList": "function",
+      "CloseoutReady": "interface",
+      "ManagerMeReady": "interface",
+      "ManagerMeResult": "type",
+      "ManagerNotification": "type",
+      "ManagerTodayReady": "type",
+      "ManagerTodayResult": "type",
+      "NotificationsReady": "interface",
+      "NotificationsResult": "type",
+      "OutboxState": "interface",
+      "PartiesReady": "interface",
+      "PickupsReady": "interface",
+      "SeatingReady": "interface",
+      "SyncEventKind": "type",
+      "useCloseout": "function",
+      "useManagerMe": "function",
+      "useManagerToday": "function",
+      "useNotifications": "function",
+      "useParties": "function",
+      "usePickups": "function",
+      "useSeating": "function",
+      "AddTravellerNoteInput": "interface",
+      "AgencyAdminMeReady": "interface",
+      "AgencyAdminMeResult": "type",
+      "AgencyManagerProfileResult": "interface",
+      "AgencyScopedParams": "interface",
+      "AppShell": "function",
+      "AppShellFamily": "type",
+      "AppShellFrame": "type",
+      "AppShellProps": "interface",
+      "BlobStatusResult": "interface",
+      "BlockerDeepLink": "interface",
+      "BookingsReady": "interface",
+      "BrandShell": "function",
+      "BrandShellProps": "interface",
+      "CLOSEOUT_ACTION_TAB": "const",
+      "CapabilityStatusesResult": "interface",
+      "CapabilityTriple": "interface",
+      "CloseoutActionKey": "type",
+      "CloseoutBlockerKey": "type",
+      "ConfigDocument": "type",
+      "ConfigShell": "function",
+      "ConfigShellProps": "interface",
+      "ConflictRecord": "interface",
+      "ConflictsResult": "interface",
+      "CreateRegistryOptions": "interface",
+      "DeepLinkParams": "interface",
+      "DefaultCapabilityViews": "interface",
+      "DomainHookResult": "type",
+      "ErrorClassification": "interface",
+      "ErrorShell": "class",
+      "ErrorShellClassification": "type",
+      "ErrorShellFallbackContext": "interface",
+      "ErrorShellProps": "interface",
+      "FeedbackNpsReady": "interface",
+      "FeedbackNpsScope": "type",
+      "HostCssCompatibilityProbe": "function",
+      "HostCssHazard": "type",
+      "I18nShell": "function",
+      "I18nShellProps": "interface",
+      "JourneyResult": "interface",
+      "KaafilBrandAssets": "interface",
+      "KaafilSessionProbe": "function",
+      "KaafilSessionProbeProps": "interface",
+      "KaafilTripTabKey": "type",
+      "KaafilUIKitProvider": "function",
+      "KaafilUIKitProviderCredential": "type",
+      "KaafilUIKitProviderCredentialProps": "type",
+      "KaafilUIKitProviderProps": "interface",
+      "ManagerAgencyProfileRead": "type",
+      "ManagersResult": "type",
+      "NotImplementedError": "class",
+      "OfflineMutationConfig": "interface",
+      "OfflineMutationResult": "interface",
+      "OfflineMutationStatus": "type",
+      "OfflineShell": "function",
+      "OfflineShellProps": "interface",
+      "OutboxStatusOptions": "interface",
+      "OutboxStatusResult": "interface",
+      "Persona": "type",
+      "Registry": "interface",
+      "ResolveBlockerInput": "interface",
+      "ServerTimeApi": "interface",
+      "SessionShell": "function",
+      "SessionShellCredential": "type",
+      "SessionShellProps": "type",
+      "SessionState": "interface",
+      "ShareFormAnswer": "interface",
+      "ShareFormListItem": "interface",
+      "ShareFormWriteInput": "interface",
+      "ShareFormsListStatus": "type",
+      "ShareFormsResult": "interface",
+      "ShareFormsWriteStatus": "type",
+      "ShareLinkRow": "type",
+      "ShareLinksResult": "interface",
+      "ShareMeta": "interface",
+      "ShareParams": "interface",
+      "ShareSectionKey": "type",
+      "ShareSections": "type",
+      "ShareSnapshotOptions": "interface",
+      "ShareSnapshotResult": "interface",
+      "ShareSnapshotTrip": "type",
+      "SnapshotEntityResult": "interface",
+      "SnapshotListResult": "interface",
+      "StalenessState": "interface",
+      "TelemetryEvent": "type",
+      "TelemetryShell": "function",
+      "TelemetryShellProps": "interface",
+      "ThemeShell": "function",
+      "ThemeShellProps": "interface",
+      "TravellerFormResponseRow": "type",
+      "TravellerProfileRead": "type",
+      "TravellerProfileResult": "interface",
+      "TreksReady": "interface",
+      "TripManagerRow": "type",
+      "TripScopedParams": "interface",
+      "createRegistry": "function",
+      "fromSearchParams": "function",
+      "isTripTabKey": "function",
+      "resolveBlockerDeepLink": "function",
+      "toSearchParams": "function",
+      "useAgencyAdminMe": "function",
+      "useAgencyManagerProfile": "function",
+      "useBlobStatus": "function",
+      "useBookings": "function",
+      "useCapabilities": "function",
+      "useCapability": "function",
+      "useCapabilityStatuses": "function",
+      "useConflicts": "function",
+      "useDefaultCapabilityViews": "function",
+      "useFeedbackNps": "function",
+      "useJourney": "function",
+      "useKaafilBrand": "function",
+      "useKaafilChrome": "function",
+      "useKaafilShareMeta": "function",
+      "useManagers": "function",
+      "useOfflineEngine": "function",
+      "useOfflineEvent": "function",
+      "useOfflineMutation": "function",
+      "useOutboxStatus": "function",
+      "usePersona": "function",
+      "useResolvedSetting": "function",
+      "useServerTime": "function",
+      "useSession": "function",
+      "useShareForms": "function",
+      "useShareLinks": "function",
+      "useShareSnapshot": "function",
+      "useSnapshotEntity": "function",
+      "useSnapshotList": "function",
+      "useStaleness": "function",
+      "useTravellerFormResponses": "function",
+      "useTravellerProfile": "function",
+      "useTreks": "function"
+    },
+    "kaafil-react-uikit/manager": {
+      "BootErrorScreen": "function",
+      "BootErrorScreenProps": "interface",
+      "BootFailureMode": "type",
+      "OfflineFallbackScreen": "function",
+      "OfflineFallbackScreenProps": "interface",
+      "LockedTripScreen": "function",
+      "LockedTripScreenProps": "interface",
+      "NotFoundScreen": "function",
+      "NotFoundScreenProps": "interface",
+      "SessionExpiredScreen": "function",
+      "SessionExpiredScreenProps": "interface",
+      "ChecklistAvailableTemplateRow": "type",
+      "FileListItem": "type",
+      "FilePurpose": "type",
+      "FloatLedgerMovementRow": "type",
+      "FloatLedgerSummaryRow": "type",
+      "ManagerFileView": "type",
+      "CloseoutAggregate": "type",
+      "ConflictRecord": "interface",
+      "ManagerNotification": "type",
+      "PartiesTripRosterRow": "type",
+      "ManagerOwnTrip": "type",
+      "OutboxOp": "interface",
+      "PickupStopDeltaRow": "type",
+      "ChecklistItemDeltaRow": "type",
+      "ChecklistItemGate": "type",
+      "ChecklistItemLiveRow": "type",
+      "ChecklistItemPhase": "type",
+      "ChecklistSectionRow": "type",
+      "CloseoutBlockerRow": "type",
+      "FormDefinitionDetail": "type",
+      "FormResponseDetail": "type",
+      "ItineraryChangeLogRow": "type",
+      "ItineraryDayRow": "type",
+      "ItineraryItemRow": "type",
+      "KaafilManagerApp": "function",
+      "KaafilManagerAppProps": "interface",
+      "KaafilManagerAppTabKey": "type",
+      "ManagerChecklistSection": "function",
+      "ManagerChecklistSectionProps": "interface",
+      "ManagerCloseoutSection": "function",
+      "ManagerCloseoutSectionProps": "interface",
+      "ManagerDocumentsSection": "function",
+      "ManagerDocumentsSectionProps": "interface",
+      "ManagerFab": "function",
+      "ManagerFabProps": "interface",
+      "ManagerFloatLedgerSection": "function",
+      "ManagerFloatLedgerSectionProps": "interface",
+      "ManagerFormsSection": "function",
+      "ManagerFormsSectionProps": "interface",
+      "ManagerItinerarySection": "function",
+      "ManagerItinerarySectionProps": "interface",
+      "ManagerManifestSection": "function",
+      "ManagerManifestSectionProps": "interface",
+      "ManagerMeSection": "function",
+      "ManagerMeSectionProps": "interface",
+      "ManagerMoneySection": "function",
+      "ManagerMoneySectionProps": "interface",
+      "ManagerNotificationsSection": "function",
+      "ManagerNotificationsSectionProps": "interface",
+      "ManagerNowSection": "function",
+      "ManagerNowSectionProps": "interface",
+      "ManagerNowSectionUIProps": "interface",
+      "ManagerOverviewSection": "function",
+      "ManagerOverviewSectionProps": "interface",
+      "ManagerPickupsSection": "function",
+      "ManagerPickupsSectionProps": "interface",
+      "ManagerRoomingSection": "function",
+      "ManagerRoomingSectionProps": "interface",
+      "ManagerRosterSection": "function",
+      "ManagerRosterSectionProps": "interface",
+      "ManagerShell": "function",
+      "ManagerShellHeaderBack": "interface",
+      "ManagerShellHeaderConfig": "type",
+      "ManagerShellHeaderPage": "interface",
+      "ManagerShellProps": "interface",
+      "ManagerShellTab": "interface",
+      "ManagerSyncCenterSection": "function",
+      "ManagerSyncCenterSectionProps": "interface",
+      "ManagerTodayEngaged": "type",
+      "ManagerTodayIdle": "type",
+      "ManagerTravellerProfileSection": "function",
+      "ManagerTravellerProfileSectionProps": "interface",
+      "ManagerTripEventType": "type",
+      "ManagerTripSection": "function",
+      "ManagerTripSectionProps": "interface",
+      "ManagerTripTabKey": "type",
+      "ManagerVehiclesSection": "function",
+      "ManagerVehiclesSectionProps": "interface",
+      "ManagerVendorsSection": "function",
+      "ManagerVendorsSectionProps": "interface",
+      "ManifestBookingGroup": "interface",
+      "ManifestBookingStatus": "type",
+      "ManifestDiet": "type",
+      "ManifestTraveller": "interface",
+      "PickupManifestResult": "type",
+      "RoomingAutoAssignResult": "type",
+      "RoomingBed": "type",
+      "RoomingOccupantRow": "type",
+      "RoomingRoom": "type",
+      "RoomingStayWindow": "type",
+      "SeatingOccupantRow": "type",
+      "SeatingSeatSlot": "type",
+      "SeatingVehicle": "type",
+      "TravellerFormResponseRow": "type",
+      "TripFormRow": "type",
+      "TripListRowProps": "interface",
+      "TripVendorRow": "type",
+      "VendorCategory": "type"
+    },
+    "kaafil-react-uikit/admin": {
+      "BootErrorScreen": "function",
+      "BootErrorScreenProps": "interface",
+      "BootFailureMode": "type",
+      "OfflineFallbackScreen": "function",
+      "OfflineFallbackScreenProps": "interface",
+      "LockedTripScreen": "function",
+      "LockedTripScreenProps": "interface",
+      "NotFoundScreen": "function",
+      "NotFoundScreenProps": "interface",
+      "SessionExpiredScreen": "function",
+      "SessionExpiredScreenProps": "interface",
+      "AgencySettingsDocument": "type",
+      "FormBuilderBindingRow": "type",
+      "FormSectionRow": "type",
+      "BookingListRow": "type",
+      "ManagerAgencyProfileResponse": "type",
+      "SeatingOccupant": "type",
+      "TravellerAgencyProfileResponse": "type",
+      "TripDirectorySegmentCounts": "interface",
+      "TripManifestFacets": "interface",
+      "FloatSummaryRow": "type",
+      "AdminShell": "function",
+      "AdminShellBrand": "interface",
+      "AdminShellBreadcrumbEntry": "interface",
+      "AdminShellHeaderConfig": "interface",
+      "AdminShellNavIconKey": "type",
+      "AdminShellNavItem": "interface",
+      "AdminShellProps": "interface",
+      "AdminShellUser": "interface",
+      "AgencySettingsScreen": "function",
+      "AgencySettingsScreenProps": "interface",
+      "BookingKind": "type",
+      "BookingLiveRow": "type",
+      "BuilderHeaderProps": "interface",
+      "ChecklistGate": "type",
+      "ChecklistPhase": "type",
+      "ChecklistTemplateEditor": "function",
+      "ChecklistTemplateEditorProps": "interface",
+      "ChecklistTemplateItemDraft": "interface",
+      "ChecklistTemplateLibrary": "function",
+      "ChecklistTemplateLibraryProps": "interface",
+      "ChecklistTemplateRow": "type",
+      "CollectionLiveRow": "type",
+      "CollectionMode": "type",
+      "DocumentRowModel": "interface",
+      "DocumentSpend": "interface",
+      "EligibleStatus": "type",
+      "ExpenseCategory": "type",
+      "ExpenseClaimStatus": "type",
+      "ExpenseFilters": "interface",
+      "ExpenseLiveRow": "type",
+      "ExpensePaymentMode": "type",
+      "FieldDef": "type",
+      "FieldRowProps": "interface",
+      "FloatAction": "type",
+      "FloatDirection": "type",
+      "FloatMovementRow": "type",
+      "FloatMovementType": "type",
+      "FormBuilder": "function",
+      "FormBuilderProps": "interface",
+      "FormDetailRow": "type",
+      "FormFieldRow": "type",
+      "FormParticipantRow": "interface",
+      "FormRow": "type",
+      "FormRowProps": "interface",
+      "FormsAuthoringFlow": "function",
+      "FormsAuthoringFlowProps": "interface",
+      "FormsLibrary": "function",
+      "FormsLibraryProps": "interface",
+      "ItineraryDayGroup": "interface",
+      "ItineraryViewMode": "type",
+      "JourneyTriggerRow": "type",
+      "KaafilAgencyWorkspace": "function",
+      "KaafilAgencyWorkspacePaneKey": "type",
+      "KaafilAgencyWorkspaceProps": "interface",
+      "ManagerAgencyProfileTripRow": "type",
+      "ManagerDirectoryFlow": "function",
+      "ManagerDirectoryFlowProps": "interface",
+      "ManagerListRowResponse": "type",
+      "ManagerProfileSection": "function",
+      "ManagerProfileSectionProps": "interface",
+      "ManagerResultRowProps": "interface",
+      "ManifestFilterState": "interface",
+      "ManifestGroupBy": "type",
+      "ManifestRowProps": "interface",
+      "PickupKind": "type",
+      "PickupRollup": "type",
+      "PickupStopLiveRow": "type",
+      "PickupView": "type",
+      "PlanLockedReason": "type",
+      "PlanLockedScreen": "function",
+      "PlanLockedScreenProps": "interface",
+      "RoomingBed": "type",
+      "RoomingOccupant": "type",
+      "RoomingRoomLiveRow": "type",
+      "RoomingWindowGroup": "interface",
+      "SeatRow": "interface",
+      "SeatingSeat": "type",
+      "SeatingVehicleLiveRow": "type",
+      "SectionCardProps": "interface",
+      "SectionDef": "interface",
+      "StayWindowRow": "type",
+      "SupplierSortKey": "type",
+      "SupplierUsage": "interface",
+      "TemplateAuthoringFlow": "function",
+      "TemplateAuthoringFlowProps": "interface",
+      "TemplateRowProps": "interface",
+      "TravellerAgencyProfileLifetime": "type",
+      "TravellerAgencyProfileNoteRow": "type",
+      "TravellerAgencyProfileTripRow": "type",
+      "TravellerDirectoryFlow": "function",
+      "TravellerDirectoryFlowProps": "interface",
+      "TravellerDirectoryItemResponse": "type",
+      "TravellerProfileSection": "function",
+      "TravellerProfileSectionProps": "interface",
+      "TravellerSearchBox": "function",
+      "TravellerSearchBoxProps": "interface",
+      "TriggerDetailPanelProps": "interface",
+      "TriggerTemplateEditor": "function",
+      "TriggerTemplateEditorProps": "interface",
+      "TripBookingsSection": "function",
+      "TripBookingsSectionProps": "interface",
+      "TripChecklistSection": "function",
+      "TripChecklistSectionProps": "interface",
+      "TripDirectoryFlow": "function",
+      "TripDirectoryFlowProps": "interface",
+      "TripDirectoryRow": "type",
+      "TripDirectoryRowProps": "interface",
+      "TripDocumentsSection": "function",
+      "TripDocumentsSectionProps": "interface",
+      "TripExpensesSection": "function",
+      "TripExpensesSectionProps": "interface",
+      "TripFloatSection": "function",
+      "TripFloatSectionProps": "interface",
+      "TripFormsSection": "function",
+      "TripFormsSectionProps": "interface",
+      "TripItinerarySection": "function",
+      "TripItinerarySectionProps": "interface",
+      "TripKpiCell": "interface",
+      "TripManifestRow": "type",
+      "TripManifestSection": "function",
+      "TripManifestSectionProps": "interface",
+      "TripPaymentsSection": "function",
+      "TripPaymentsSectionProps": "interface",
+      "TripPickupsSection": "function",
+      "TripPickupsSectionProps": "interface",
+      "TripRoomingSection": "function",
+      "TripRoomingSectionProps": "interface",
+      "TripSuppliersSection": "function",
+      "TripSuppliersSectionProps": "interface",
+      "TripTabBlocker": "type",
+      "TripTabKey": "type",
+      "TripVehiclesSection": "function",
+      "TripVehiclesSectionProps": "interface",
+      "TripVendorRow": "type",
+      "TripWorkspace": "function",
+      "TripWorkspaceHeadProps": "interface",
+      "TripWorkspaceProps": "interface",
+      "TripWorkspaceTrip": "type",
+      "UsageSources": "interface",
+      "VehicleLayout": "type",
+      "VehicleType": "type",
+      "VendorCategory": "type"
+    },
+    "kaafil-react-uikit/traveller": {
+      "BootErrorScreen": "function",
+      "BootErrorScreenProps": "interface",
+      "BootFailureMode": "type",
+      "OfflineFallbackScreen": "function",
+      "OfflineFallbackScreenProps": "interface",
+      "KaafilShareView": "function",
+      "KaafilShareViewProps": "interface",
+      "ShareSectionKey": "type"
+    },
+    "kaafil-react-uikit/testing": {
+      "BACKOFF_LADDER_MS": "const",
+      "BackoffRung": "type",
+      "DensityToken": "type",
+      "ManagerRole": "type",
+      "MockActorAttributedRow": "interface",
+      "MockActorKind": "type",
+      "MockAgencyAdminSession": "interface",
+      "MockCapabilityRow": "interface",
+      "MockConflictEntry": "interface",
+      "MockConflictResolutionShape": "type",
+      "MockManagerSession": "interface",
+      "MockOfflineEngine": "interface",
+      "MockOfflineEngineState": "interface",
+      "MockOutboxEntry": "interface",
+      "MockOutboxEntryStatus": "type",
+      "MockShareSession": "interface",
+      "MockSyncConflictEvent": "interface",
+      "MockSyncDeltaAppliedEvent": "interface",
+      "MockSyncEnqueuedEvent": "interface",
+      "MockSyncEvent": "type",
+      "MockSyncEventKind": "type",
+      "MockSyncFlushedEvent": "interface",
+      "MockSyncParkedEvent": "interface",
+      "MockSyncReconnectedEvent": "interface",
+      "dataDarkCapability": "function",
+      "flagDarkCapability": "function",
+      "litCapability": "function",
+      "mockActorAttributedRow": "function",
+      "mockAgencyAdminSession": "function",
+      "mockCapabilities": "function",
+      "mockManagerSession": "function",
+      "mockOfflineEngine": "function",
+      "mockShareSession": "function",
+      "mockSyncEvent": "function",
+      "modeDarkCapability": "function"
+    }
+  },
+  "props": {
+    "AppShellProps": {
+      "required": [],
+      "optional": [
+        "actionBarSlot",
+        "children",
+        "connectivitySlot",
+        "family",
+        "frame",
+        "isolation",
+        "navSlot",
+        "style"
+      ]
+    },
+    "BrandShellProps": {
+      "required": [],
+      "optional": [
+        "appName",
+        "children",
+        "favicon",
+        "headStrategy",
+        "logo",
+        "logoMark"
+      ]
+    },
+    "ConfigShellProps": {
+      "required": [],
+      "optional": [
+        "children",
+        "refreshOn",
+        "seedConfig"
+      ]
+    },
+    "ErrorShellProps": {
+      "required": [],
+      "optional": [
+        "children",
+        "fallbackSlot"
+      ]
+    },
+    "I18nShellProps": {
+      "required": [],
+      "optional": [
+        "children",
+        "locale"
+      ]
+    },
+    "KaafilSessionProbeProps": {
+      "required": [],
+      "optional": [
+        "expectedEnvironment",
+        "style"
+      ]
+    },
+    "KaafilUIKitProviderCredentialProps": {
+      "required": [],
+      "optional": [
+        "accessToken",
+        "agencyRef",
+        "blob",
+        "brand",
+        "children",
+        "conflictResolver",
+        "credentialResolver",
+        "defaultCapabilityViews",
+        "density",
+        "environment",
+        "isolation",
+        "locale",
+        "offlineScope",
+        "onEvent",
+        "onSessionExpired",
+        "readEntity",
+        "refreshToken",
+        "seedConfig",
+        "shareToken",
+        "storage",
+        "theme"
+      ]
+    },
+    "KaafilUIKitProviderProps": {
+      "required": [],
+      "optional": [
+        "blob",
+        "brand",
+        "children",
+        "conflictResolver",
+        "defaultCapabilityViews",
+        "density",
+        "environment",
+        "isolation",
+        "locale",
+        "offlineScope",
+        "onEvent",
+        "onSessionExpired",
+        "readEntity",
+        "seedConfig",
+        "storage",
+        "theme"
+      ]
+    },
+    "OfflineShellProps": {
+      "required": [
+        "storage"
+      ],
+      "optional": [
+        "blob",
+        "children",
+        "conflictResolver",
+        "readEntity",
+        "scope"
+      ]
+    },
+    "SessionShellProps": {
+      "required": [],
+      "optional": [
+        "accessToken",
+        "agencyRef",
+        "children",
+        "credentialResolver",
+        "environment",
+        "onRefresh",
+        "onSessionExpired",
+        "refreshToken",
+        "shareToken"
+      ]
+    },
+    "TelemetryShellProps": {
+      "required": [],
+      "optional": [
+        "children",
+        "onEvent"
+      ]
+    },
+    "ThemeShellProps": {
+      "required": [],
+      "optional": [
+        "children",
+        "density",
+        "theme"
+      ]
+    },
+    "BootErrorScreenProps": {
+      "required": [],
+      "optional": [
+        "components",
+        "detail",
+        "failureMode",
+        "onRetry"
+      ]
+    },
+    "OfflineFallbackScreenProps": {
+      "required": [],
+      "optional": [
+        "components",
+        "onRetry",
+        "style",
+        "token",
+        "tripRef"
+      ]
+    },
+    "LockedTripScreenProps": {
+      "required": [
+        "onGoToClosingDay",
+        "tripRef"
+      ],
+      "optional": [
+        "components",
+        "intendedAction",
+        "style"
+      ]
+    },
+    "NotFoundScreenProps": {
+      "required": [],
+      "optional": [
+        "components",
+        "onGoBack",
+        "style"
+      ]
+    },
+    "SessionExpiredScreenProps": {
+      "required": [
+        "onReauthenticate"
+      ],
+      "optional": [
+        "components",
+        "returnTo",
+        "style"
+      ]
+    },
+    "KaafilManagerAppProps": {
+      "required": [
+        "onCollectFromGroup",
+        "onCollectPayment",
+        "onLogExpense",
+        "onNavigateModule",
+        "onVendorSelect"
+      ],
+      "optional": [
+        "activeTab",
+        "components",
+        "getSyncEntityLabel",
+        "initialTripRef",
+        "initialTripTabKey",
+        "onCloseFloatLedger",
+        "onCloseNotifications",
+        "onCloseSyncCenter",
+        "onCloseTraveller",
+        "onConflictResolved",
+        "onOpenFloatLedger",
+        "onOpenNotifications",
+        "onOpenSyncCenter",
+        "onOpenTraveller",
+        "onSelectTrip",
+        "onSignOut",
+        "onSubmitUnlockRequest",
+        "onTabChange",
+        "onTripTabChange",
+        "selectedTripRef",
+        "style"
+      ]
+    },
+    "ManagerChecklistSectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "components",
+        "style"
+      ]
+    },
+    "ManagerCloseoutSectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "components",
+        "onBlockerAction",
+        "onSubmitUnlockRequest",
+        "style"
+      ]
+    },
+    "ManagerDocumentsSectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "ManagerFabProps": {
+      "required": [
+        "label",
+        "onClick"
+      ],
+      "optional": [
+        "icon",
+        "style",
+        "tone"
+      ]
+    },
+    "ManagerFloatLedgerSectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "ManagerFormsSectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "components",
+        "initialFormRef",
+        "onSubmitted",
+        "style",
+        "travellerRef"
+      ]
+    },
+    "ManagerItinerarySectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "components",
+        "emptyView",
+        "style"
+      ]
+    },
+    "ManagerManifestSectionProps": {
+      "required": [
+        "onCollectFromGroup",
+        "onOpenTraveller",
+        "tripRef"
+      ],
+      "optional": [
+        "components",
+        "emptyView",
+        "style"
+      ]
+    },
+    "ManagerMeSectionProps": {
+      "required": [],
+      "optional": [
+        "onOpenTrip",
+        "onSignOut",
+        "style"
+      ]
+    },
+    "ManagerMoneySectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "components",
+        "onOpenTraveller",
+        "onViewFloatLedger",
+        "style"
+      ]
+    },
+    "ManagerNotificationsSectionProps": {
+      "required": [
+        "onSelectNotification"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "ManagerNowSectionProps": {
+      "required": [
+        "onCollectPayment",
+        "onLogExpense",
+        "onNavigateModule",
+        "tripRef"
+      ],
+      "optional": [
+        "components",
+        "idleView",
+        "style"
+      ]
+    },
+    "ManagerNowSectionUIProps": {
+      "required": [
+        "data",
+        "onCollectPayment",
+        "onLogExpense",
+        "onNavigateModule",
+        "syncedAt"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "ManagerOverviewSectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "ManagerPickupsSectionProps": {
+      "required": [
+        "eventType",
+        "tripRef"
+      ],
+      "optional": [
+        "components",
+        "style"
+      ]
+    },
+    "ManagerRoomingSectionProps": {
+      "required": [
+        "onOpenTraveller",
+        "tripRef"
+      ],
+      "optional": [
+        "components",
+        "emptyView",
+        "style"
+      ]
+    },
+    "ManagerRosterSectionProps": {
+      "required": [
+        "onOpenTraveller",
+        "tripRef"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "ManagerShellProps": {
+      "required": [],
+      "optional": [
+        "activeTabKey",
+        "children",
+        "components",
+        "fab",
+        "header",
+        "onTabChange",
+        "style",
+        "tabs"
+      ]
+    },
+    "ManagerSyncCenterSectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "getEntityLabel",
+        "onResolved",
+        "style"
+      ]
+    },
+    "ManagerTravellerProfileSectionProps": {
+      "required": [
+        "travellerRef",
+        "tripRef"
+      ],
+      "optional": [
+        "components",
+        "style"
+      ]
+    },
+    "ManagerTripSectionProps": {
+      "required": [
+        "onCollectFromGroup",
+        "onOpenTraveller",
+        "onVendorSelect",
+        "tripRef"
+      ],
+      "optional": [
+        "activeTabKey",
+        "onSubmitUnlockRequest",
+        "onTabChange",
+        "onViewFloatLedger",
+        "panels",
+        "style"
+      ]
+    },
+    "ManagerVehiclesSectionProps": {
+      "required": [
+        "onOpenTraveller",
+        "tripRef"
+      ],
+      "optional": [
+        "components",
+        "emptyView",
+        "style"
+      ]
+    },
+    "ManagerVendorsSectionProps": {
+      "required": [
+        "onVendorSelect",
+        "tripRef"
+      ],
+      "optional": [
+        "category",
+        "components",
+        "emptyView",
+        "style"
+      ]
+    },
+    "TripListRowProps": {
+      "required": [
+        "onSelect",
+        "trip"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "AdminShellProps": {
+      "required": [
+        "activeItemKey",
+        "header",
+        "items",
+        "onSelectItem"
+      ],
+      "optional": [
+        "brand",
+        "children",
+        "components",
+        "style",
+        "user"
+      ]
+    },
+    "AgencySettingsScreenProps": {
+      "required": [],
+      "optional": [
+        "components",
+        "style",
+        "subtitle",
+        "title"
+      ]
+    },
+    "BuilderHeaderProps": {
+      "required": [
+        "form",
+        "onArchive",
+        "onClose",
+        "onPublish",
+        "onReopen",
+        "onTitleChange",
+        "onTitleCommit",
+        "onUnarchive",
+        "pending",
+        "title"
+      ],
+      "optional": [
+        "onDelete",
+        "style"
+      ]
+    },
+    "ChecklistTemplateEditorProps": {
+      "required": [
+        "templateId"
+      ],
+      "optional": [
+        "components",
+        "onPublished",
+        "onSaved",
+        "style"
+      ]
+    },
+    "ChecklistTemplateLibraryProps": {
+      "required": [],
+      "optional": [
+        "components",
+        "creating",
+        "onCreatingChange",
+        "onDeleted",
+        "onSelectTemplate",
+        "selectedTemplateId",
+        "style",
+        "subtitle",
+        "title"
+      ]
+    },
+    "FieldRowProps": {
+      "required": [
+        "dragOver",
+        "dragging",
+        "field",
+        "kind",
+        "onDragEnd",
+        "onDragOverRow",
+        "onDragStart",
+        "onDrop",
+        "onOpenSettings"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "FormBuilderProps": {
+      "required": [
+        "formId"
+      ],
+      "optional": [
+        "components",
+        "onBack",
+        "style"
+      ]
+    },
+    "FormRowProps": {
+      "required": [
+        "form"
+      ],
+      "optional": [
+        "onArchive",
+        "onClose",
+        "onDelete",
+        "onPublish",
+        "onReopen",
+        "onSelect",
+        "onUnarchive",
+        "selected",
+        "style"
+      ]
+    },
+    "FormsAuthoringFlowProps": {
+      "required": [],
+      "optional": [
+        "initialFormId",
+        "style"
+      ]
+    },
+    "FormsLibraryProps": {
+      "required": [],
+      "optional": [
+        "components",
+        "creating",
+        "onCreatingChange",
+        "onSelectForm",
+        "selectedFormId",
+        "style",
+        "subtitle",
+        "title"
+      ]
+    },
+    "KaafilAgencyWorkspaceProps": {
+      "required": [],
+      "optional": [
+        "components",
+        "initialPane",
+        "onCloseForm",
+        "onCloseManager",
+        "onCloseTemplate",
+        "onCloseTraveller",
+        "onCloseTrip",
+        "onOpenForm",
+        "onOpenManager",
+        "onOpenTemplate",
+        "onOpenTraveller",
+        "onPaneChange",
+        "onSelectTrip",
+        "onSignOut",
+        "selectedPane",
+        "style"
+      ]
+    },
+    "ManagerDirectoryFlowProps": {
+      "required": [],
+      "optional": [
+        "components",
+        "onSelectManager",
+        "style",
+        "subtitle",
+        "title"
+      ]
+    },
+    "ManagerProfileSectionProps": {
+      "required": [
+        "managerRef"
+      ],
+      "optional": [
+        "components",
+        "onBack",
+        "style"
+      ]
+    },
+    "ManagerResultRowProps": {
+      "required": [
+        "index",
+        "manager"
+      ],
+      "optional": [
+        "onSelect",
+        "style"
+      ]
+    },
+    "ManifestRowProps": {
+      "required": [
+        "index",
+        "onOpen",
+        "onRemove",
+        "onShareLink",
+        "row",
+        "serverTime"
+      ],
+      "optional": [
+        "onOpenProfile",
+        "style"
+      ]
+    },
+    "PlanLockedScreenProps": {
+      "required": [
+        "capabilityKey",
+        "onUpgradeRequest"
+      ],
+      "optional": [
+        "components",
+        "reason",
+        "style"
+      ]
+    },
+    "SectionCardProps": {
+      "required": [
+        "errorKind",
+        "onDismissError",
+        "onSave",
+        "saving",
+        "section",
+        "stored"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "TemplateAuthoringFlowProps": {
+      "required": [],
+      "optional": [
+        "initialTemplateId",
+        "style"
+      ]
+    },
+    "TemplateRowProps": {
+      "required": [
+        "template"
+      ],
+      "optional": [
+        "onDelete",
+        "onSelect",
+        "selected",
+        "style"
+      ]
+    },
+    "TravellerDirectoryFlowProps": {
+      "required": [],
+      "optional": [
+        "adding",
+        "components",
+        "debounceMs",
+        "hideAddTraveller",
+        "minQueryLength",
+        "onAddingChange",
+        "onSelectTraveller",
+        "onTravellerAdded",
+        "style",
+        "subtitle",
+        "title"
+      ]
+    },
+    "TravellerProfileSectionProps": {
+      "required": [
+        "travellerRef"
+      ],
+      "optional": [
+        "components",
+        "onBack",
+        "style"
+      ]
+    },
+    "TravellerSearchBoxProps": {
+      "required": [],
+      "optional": [
+        "components",
+        "debounceMs",
+        "minQueryLength",
+        "onSelectTraveller",
+        "style",
+        "trailingAction"
+      ]
+    },
+    "TriggerDetailPanelProps": {
+      "required": [
+        "onSave",
+        "onToggle",
+        "phaseLabel",
+        "saving",
+        "trigger"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "TriggerTemplateEditorProps": {
+      "required": [],
+      "optional": [
+        "onTriggerPatched",
+        "style",
+        "subtitle",
+        "title",
+        "tripModeFilter"
+      ]
+    },
+    "TripBookingsSectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "onOpenDocuments",
+        "style"
+      ]
+    },
+    "TripChecklistSectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "components",
+        "enableBulkToggle",
+        "initialPhase",
+        "onItemToggled",
+        "readOnly",
+        "style"
+      ]
+    },
+    "TripDirectoryFlowProps": {
+      "required": [],
+      "optional": [
+        "components",
+        "initialEventType",
+        "onOpenTrip",
+        "style"
+      ]
+    },
+    "TripDirectoryRowProps": {
+      "required": [
+        "index",
+        "onOpen",
+        "trip"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "TripDocumentsSectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "TripExpensesSectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "TripFloatSectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "TripFormsSectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "components",
+        "readOnly",
+        "style"
+      ]
+    },
+    "TripItinerarySectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "onOpenVendor",
+        "style"
+      ]
+    },
+    "TripManifestSectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "components",
+        "onOpenTravellerProfile",
+        "style"
+      ]
+    },
+    "TripPaymentsSectionProps": {
+      "required": [
+        "balance",
+        "tripRef"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "TripPickupsSectionProps": {
+      "required": [
+        "timeZone",
+        "tripRef",
+        "tripStartIso"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "TripRoomingSectionProps": {
+      "required": [
+        "timeZone",
+        "tripEndIso",
+        "tripRef",
+        "tripStartIso"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "TripSuppliersSectionProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "TripVehiclesSectionProps": {
+      "required": [
+        "durationDays",
+        "tripRef"
+      ],
+      "optional": [
+        "style"
+      ]
+    },
+    "TripWorkspaceHeadProps": {
+      "required": [
+        "trip"
+      ],
+      "optional": [
+        "onBack",
+        "style"
+      ]
+    },
+    "TripWorkspaceProps": {
+      "required": [
+        "tripRef"
+      ],
+      "optional": [
+        "components",
+        "initialTab",
+        "onBack",
+        "onOpenTravellerProfile",
+        "panels",
+        "style"
+      ]
+    },
+    "KaafilShareViewProps": {
+      "required": [
+        "token"
+      ],
+      "optional": [
+        "headStrategy",
+        "household",
+        "renderSection",
+        "sections",
+        "style",
+        "travellerRef"
+      ]
+    }
+  }
+}

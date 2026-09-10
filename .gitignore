@@ -1,0 +1,28 @@
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+*.tgz
+
+.DS_Store
+.vscode/
+.idea/
+
+# Credentials never belong here. The eval fixtures ship empty stubs.
+.env
+.env.*
+!.env.example
+
+# Generated locally by `npm run setup`; the source of truth is skills/.
+.claude/skills/
+.claude/settings.local.json
+
+# Transient fence files and installed sandbox deps. The pinned project
+# config (package.json, tsconfig.json) IS tracked — that is what makes the
+# typecheck reproducible.
+test-suite/typecheck/**/node_modules/
+test-suite/typecheck/**/__fences__/
+
+# Eval output. The harness and fixtures are tracked; run artefacts are not.
+test-suite/results/
+test-suite/tmp/

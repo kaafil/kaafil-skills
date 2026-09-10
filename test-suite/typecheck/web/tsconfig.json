@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // NOT skipped, deliberately. skipLibCheck:true would hide exactly the
+    // class of defect this sandbox exists to catch — a fence that imports a
+    // type the published .d.ts does not actually export.
+    "skipLibCheck": false,
+
+    // A fence is a snippet, not an app: it legitimately declares values it
+    // never reads. Leaving these on would fail honest example code.
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "include": ["fence-globals.d.ts", "__fences__/**/*.ts", "__fences__/**/*.tsx"]
+}

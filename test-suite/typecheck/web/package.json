@@ -1,0 +1,19 @@
+{
+  "name": "kaafil-skills-typecheck-web",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Pinned sandbox that installs the PUBLISHED Kaafil packages so skill code fences are typechecked against what a real integrator gets, not against a sibling checkout.",
+  "type": "module",
+  "dependencies": {
+    "kaafil-js": "0.1.0-beta.7",
+    "kaafil-react-uikit": "0.1.0-beta.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "typescript": "^5.9.0"
+  }
+}
