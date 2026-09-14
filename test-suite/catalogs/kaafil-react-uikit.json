@@ -1,6 +1,6 @@
 {
   "package": "kaafil-react-uikit",
-  "version": "0.1.0-beta.1",
+  "version": "0.9.0",
   "generatedBy": "test-suite/scripts/build-catalog.mjs",
   "subpaths": {
     "kaafil-react-uikit/core": {
@@ -117,6 +117,7 @@
       "BookingsReady": "interface",
       "BrandShell": "function",
       "BrandShellProps": "interface",
+      "BuildShareUrl": "type",
       "CLOSEOUT_ACTION_TAB": "const",
       "CapabilityStatusesResult": "interface",
       "CapabilityTriple": "interface",
@@ -207,6 +208,7 @@
       "useAgencyManagerProfile": "function",
       "useBlobStatus": "function",
       "useBookings": "function",
+      "useBuildShareUrl": "function",
       "useCapabilities": "function",
       "useCapability": "function",
       "useCapabilityStatuses": "function",
@@ -558,6 +560,16 @@
       "mockShareSession": "function",
       "mockSyncEvent": "function",
       "modeDarkCapability": "function"
+    },
+    "kaafil-react-uikit/offline": {
+      "CachedCredentialOptions": "interface",
+      "CredentialResolver": "type",
+      "CredentialStore": "interface",
+      "KaafilOfflineShellOptions": "interface",
+      "StoredCredential": "type",
+      "installKaafilOfflineShell": "function",
+      "localStorageCredentialStore": "function",
+      "withCachedCredential": "function"
     }
   },
   "props": {
@@ -621,6 +633,7 @@
         "agencyRef",
         "blob",
         "brand",
+        "buildShareUrl",
         "children",
         "conflictResolver",
         "credentialResolver",
@@ -645,6 +658,7 @@
       "optional": [
         "blob",
         "brand",
+        "buildShareUrl",
         "children",
         "conflictResolver",
         "defaultCapabilityViews",
@@ -755,7 +769,6 @@
         "onCollectFromGroup",
         "onCollectPayment",
         "onLogExpense",
-        "onNavigateModule",
         "onVendorSelect"
       ],
       "optional": [
@@ -769,6 +782,7 @@
         "onCloseSyncCenter",
         "onCloseTraveller",
         "onConflictResolved",
+        "onNavigateModule",
         "onOpenFloatLedger",
         "onOpenNotifications",
         "onOpenSyncCenter",

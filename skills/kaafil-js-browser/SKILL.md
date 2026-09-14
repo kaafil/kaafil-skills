@@ -2,7 +2,7 @@
 name: kaafil-js-browser
 description: Using kaafil-js/client directly in a browser without the React UIKit — constructing KaafilClient, the namespaced session openers, the resource tree, and the offline engine. Use when building non-React UI or a custom frontend on Kaafil.
 license: "MIT"
-compatibility: "kaafil-js ^0.1.0-beta.7"
+compatibility: "kaafil-js ^0.5.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"

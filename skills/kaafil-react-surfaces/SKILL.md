@@ -2,7 +2,7 @@
 name: kaafil-react-surfaces
 description: The three Kaafil surfaces — KaafilManagerApp, KaafilAgencyWorkspace and KaafilShareView — what each one is, their real required props, and how to pick the one matching your credential. Use for "which component do I mount".
 license: "MIT"
-compatibility: "React >=18.2 <20; kaafil-react-uikit ^0.1.0-beta.1"
+compatibility: "React >=18.2 <20; kaafil-react-uikit ^0.9.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"
@@ -56,22 +56,36 @@ routes rather than in-place pushes.
 
 ## Field — `KaafilManagerApp`
 
-**Five required callbacks**, and they are required for a reason: each
-forwards straight to a mounted child's own required prop. The surface
-never stubs a child's required callback behind a no-op, because that would
-silently swallow an action a manager took.
+**Four required callbacks.** Each forwards straight to a mounted child's own
+required prop *that the surface has no internal handler for*. The surface never
+stubs a child's required callback behind a no-op, because that would silently
+swallow an action a manager took.
 
 ```tsx
 import { KaafilManagerApp } from 'kaafil-react-uikit/manager';
 
 <KaafilManagerApp
-  onNavigateModule={(key) => router.push(`/trip/${key}`)}
-  onLogExpense={() => router.push('/expenses/new')}
-  onCollectPayment={() => router.push('/collections/new')}
+  // Required — real destinations the surface does not own.
   onCollectFromGroup={(groupId) => router.push(`/collections/new?group=${groupId}`)}
   onVendorSelect={(id) => router.push(`/vendors/${id}`)}
+  // Required — COMPLETION hooks. The write has ALREADY happened.
+  onLogExpense={() => toast('Expense logged')}
+  onCollectPayment={() => toast('Payment recorded')}
+  // Optional — the surface navigates itself; this only mirrors it.
+  onNavigateModule={(key) => analytics.track('module', { key })}
 />;
 ```
+
+**`onLogExpense` and `onCollectPayment` do not open anything.** They read like
+they gate spending and they do not: the FAB opens the UIKit's own sheet, which
+writes through `useExpenses()` / `useCollections()`, and the callback fires
+*after* that write succeeds. Routing to a "new expense" form from one of these
+gives a manager two forms for one expense.
+
+**`onNavigateModule` is optional.** The surface maps each module key onto a real
+tab and performs the navigation itself, so this is an analytics/URL-sync mirror,
+not the mechanism. Omitting it costs nothing visible. (Before
+`kaafil-react-uikit@0.9.0` it was required; a `() => {}` there was harmless.)
 
 ### There is no `assignedTrips` prop
 
@@ -130,9 +144,12 @@ you need to.
 
 - **Never mount a surface outside `KaafilUIKitProvider`.**
 - **Never mount two surfaces** from different families in one tree.
-- **Never pass a no-op for a `KaafilManagerApp` required callback** to
-  "get it compiling". Each one represents an action a manager actually
-  took; discarding it loses their work silently. Wire it, even if only to
-  a placeholder route.
+- **Never pass a no-op for one of `KaafilManagerApp`'s four required
+  callbacks** to "get it compiling". Each represents an action a manager
+  actually took; discarding it loses their work silently. Wire it, even if
+  only to a placeholder route. (`onNavigateModule` is the exception and is
+  optional — the surface handles that navigation itself.)
+- **Never route to a form from `onLogExpense` / `onCollectPayment`.** The
+  write already happened when they fire.
 - **Never try to widen what a surface shows** by prop. Scope comes from
   the credential.

@@ -1,12 +1,12 @@
 ---
 name: kaafil-react-offline
-description: Making the manager family work without a network — wiring the storage adapter, what the outbox does, observing pending writes, snapshot reads and syncedAt, and conflicts. Use for "writes are lost", "works offline", "changes vanish", "two managers edited the same thing".
+description: Making the manager family work without a network — wiring the storage adapter, the service worker and cached credential a host must supply, what the outbox does, observing pending writes, snapshot reads and syncedAt, and conflicts. Use for "writes are lost", "works offline", "changes vanish", "reload while offline", "service worker", "two managers edited the same thing".
 license: "MIT"
-compatibility: "kaafil-react-uikit ^0.1.0-beta.1; kaafil-js ^0.1.0-beta.7"
+compatibility: "kaafil-react-uikit ^0.9.0; kaafil-js ^0.5.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"
-  tags: "kaafil react offline outbox sync storage indexeddb conflict snapshot staleness pending"
+  tags: "kaafil react offline outbox sync storage indexeddb conflict snapshot staleness pending service-worker app-shell credential cache reload pwa"
 ---
 
 > **Ground truth:** the installed `useOutboxStatus`, `useSnapshotList`,
@@ -73,6 +73,70 @@ write** — so a device with IndexedDB blocked (private browsing, a locked-
 down MDM profile) throws `KaafilIndexedDbUnavailableError` up front where
 you can tell the user, rather than silently dropping their work an hour
 later. Catch it and say the device cannot work offline.
+
+## The storage adapter is not enough on its own
+
+The adapter makes the **data** survive. It does nothing about your
+**application**, and two host-side pieces are needed before "reload while
+offline" works at all. Skip them and the writes sit intact in IndexedDB behind
+a page that will not open — which reads exactly like data loss and is not.
+
+Both ship from `kaafil-react-uikit/offline`.
+
+### 1. The app shell — a service worker
+
+The kit registers nothing, deliberately: caching **your** build output is
+**your** deploy and revalidation strategy, and only your bundler knows its own
+hashed filenames. What the kit ships is the Kaafil-specific fetch policy, for
+you to compose with your own precache manifest:
+
+```ts ignore
+// src/sw.ts — built as its own bundle by vite-plugin-pwa / Workbox / next-pwa
+import { installKaafilOfflineShell } from 'kaafil-react-uikit/offline';
+
+installKaafilOfflineShell({
+  cacheName: 'acme-shell-v1',
+  appShellUrl: '/index.html',
+  precache: self.__WB_MANIFEST.map((e) => e.url),
+});
+```
+
+It never handles a non-GET (the outbox owns retries — a worker that replays a
+POST is a second retry engine racing the first), never caches a Kaafil API
+response (a cached share read keeps serving a traveller's itinerary after the
+token is revoked), and falls navigations back to the cached shell.
+
+**There is no separate step for caching Kaafil's own CSS and JS.** The package
+is bundled into your build, so its assets are already part of what your
+precache manifest covers. There is no Kaafil asset URL to allow.
+
+### 2. A credential that survives the reload
+
+Your session route mints over the network. Offline that call fails, so the
+surface never opens. **The kit never persists a credential** — where a token
+lives and what clears it are host security decisions — but it will sequence the
+fallback for you:
+
+```ts
+import { withCachedCredential, localStorageCredentialStore }
+  from 'kaafil-react-uikit/offline';
+
+const credentialResolver = withCachedCredential(
+  () => fetch('/api/session', { method: 'POST' }).then((r) => r.json()),
+  { store: localStorageCredentialStore(managerRef) },
+);
+```
+
+Two rules it encodes, and the first is the one people get wrong:
+
+- It falls back **only when the request never completed**. A 401 or 500 from a
+  reachable server still surfaces — serving a cached credential past a
+  revocation is the failure that matters. The default recognises `fetch`'s
+  `TypeError`; if you use axios or ky, pass your own `isUnreachable`.
+- It **stores and restores only — it never judges expiry.** A cached access
+  token still expires and offline cannot be refreshed, so a manager offline
+  longer than the token's life will not get in. That reaches you through the
+  provider's `onSessionExpired`.
 
 ## The outbox
 

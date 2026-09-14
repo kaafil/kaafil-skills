@@ -2,7 +2,7 @@
 name: kaafil-react-components
 description: The kaafil-react-uikit component catalog and the customization ladder — the 28 manager components, 36 admin components, the shells and system screens, and how to choose between mounting a surface, a composite section, or building on hooks.
 license: "MIT"
-compatibility: "React >=18.2 <20; kaafil-react-uikit ^0.1.0-beta.1"
+compatibility: "React >=18.2 <20; kaafil-react-uikit ^0.9.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"

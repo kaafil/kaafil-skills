@@ -2,7 +2,7 @@
 name: kaafil-auth
 description: Kaafil's credentials — which one each persona uses, how a backend mints manager and agency-admin sessions with the API key, how share tokens work, and why the API key must never reach a browser. Read before writing any Kaafil code.
 license: "MIT"
-compatibility: "kaafil-js ^0.1.0-beta.7; kaafil-react-uikit ^0.1.0-beta.1"
+compatibility: "kaafil-js ^0.5.0; kaafil-react-uikit ^0.9.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"

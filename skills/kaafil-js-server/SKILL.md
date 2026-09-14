@@ -2,7 +2,7 @@
 name: kaafil-js-server
 description: Using kaafil-js on a Node backend — constructing the Kaafil client with an API key, the namespaced resource tree, how responses are shaped, aborting and timeouts, and the boundary that keeps the API key out of the browser.
 license: "MIT"
-compatibility: "Node.js >=18; kaafil-js ^0.1.0-beta.7"
+compatibility: "Node.js >=18; kaafil-js ^0.5.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"

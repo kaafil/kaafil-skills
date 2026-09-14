@@ -2,7 +2,7 @@
 name: kaafil
 description: Entry point for integrating Kaafil — the engine behind group-travel operations — into any React app or Node backend. Detects the project, works out which of the three personas you are building for, and routes to the right skills. Use for "add Kaafil", "integrate Kaafil", "add the manager app", "add the agency console", "show a traveller their trip", "push a trip into Kaafil".
 license: "MIT"
-compatibility: "Node.js >=18; kaafil-js ^0.1.0-beta.7; kaafil-react-uikit ^0.1.0-beta.1; React >=18.2 <20"
+compatibility: "Node.js >=18; kaafil-js ^0.5.0; kaafil-react-uikit ^0.9.0; React >=18.2 <20"
 metadata:
   author: "Kaafil"
   version: "0.1.0"

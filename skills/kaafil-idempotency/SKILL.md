@@ -2,7 +2,7 @@
 name: kaafil-idempotency
 description: Making Kaafil writes safe to retry — how Idempotency-Key works, when to generate one and when to reuse it, why a retry with a fresh key creates a duplicate, and why no UIKit hook accepts a key. Read before writing any retry logic.
 license: "MIT"
-compatibility: "kaafil-js ^0.1.0-beta.7; kaafil-react-uikit ^0.1.0-beta.1"
+compatibility: "kaafil-js ^0.5.0; kaafil-react-uikit ^0.9.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"

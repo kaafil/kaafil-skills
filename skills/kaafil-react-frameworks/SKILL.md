@@ -2,7 +2,7 @@
 name: kaafil-react-frameworks
 description: Framework-specific wiring for kaafil-react-uikit — Next.js App Router and Pages Router, Vite, React Router, and the SSR rules. Covers 'use client' boundaries, where the provider goes, env var prefixes, and why the kit ships no router.
 license: "MIT"
-compatibility: "React >=18.2 <20; Next.js >=14; Vite >=4; kaafil-react-uikit ^0.1.0-beta.1"
+compatibility: "React >=18.2 <20; Next.js >=14; Vite >=4; kaafil-react-uikit ^0.9.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"

@@ -1,6 +1,6 @@
 {
   "package": "kaafil-js",
-  "version": "0.1.0-beta.7",
+  "version": "0.5.0",
   "generatedBy": "test-suite/scripts/build-catalog.mjs",
   "subpaths": {
     "kaafil-js": {
@@ -697,6 +697,7 @@
       "isShareBatchPushAvailable": "function",
       "isTombstone": "function",
       "mergeDeltaRows": "function",
+      "normalizeDateTimeInput": "function",
       "parseRoomingTone": "function",
       "roomingHeuristicSeverity": "function",
       "AgenciesResource": "interface",
@@ -748,6 +749,7 @@
       "BoundUpsertVendorOptions": "type",
       "BoundVendorsResource": "interface",
       "CONSOLIDATED_PULL_THRESHOLD_LISTS": "const",
+      "CachedRead": "interface",
       "ChecklistsResource": "interface",
       "CloseoutResource": "interface",
       "CollectionsResource": "interface",
@@ -762,6 +764,7 @@
       "CreateFormOptions": "interface",
       "CreateOfflineEngineOptions": "interface",
       "CreateOutboxOptions": "interface",
+      "CreateReadCacheStoreOptions": "interface",
       "CreateTravellerOptions": "interface",
       "CreateVendorOptions": "interface",
       "DeleteAgencyChecklistTemplateOptions": "interface",
@@ -853,6 +856,7 @@
       "PullTripResult": "interface",
       "ReadAgencyFeedbackSummaryOptions": "interface",
       "ReadAgencySettingsOptions": "interface",
+      "ReadCacheStore": "interface",
       "ReadManagerExpenseLogMetaOptions": "interface",
       "ReadManagerExpenseOptions": "interface",
       "ReadShareFormOptions": "interface",
@@ -897,6 +901,7 @@
       "createOfflineEvents": "function",
       "createOutbox": "function",
       "createPullCoordinator": "function",
+      "createReadCacheStore": "function",
       "createShareGuard": "function",
       "createSnapshotStore": "function",
       "extractSectionRows": "function",
@@ -936,6 +941,7 @@
           "patch",
           "read",
           "regenerate",
+          "reveal",
           "revoke"
         ],
         "trips": [
@@ -1151,6 +1157,7 @@
           "patch",
           "read",
           "regenerate",
+          "reveal",
           "revoke"
         ],
         "vendors": [

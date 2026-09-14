@@ -2,7 +2,7 @@
 name: kaafil-js-offline-sync
 description: The kaafil-js offline machinery — the outbox, snapshot store, delta cursors, the sync push/pull lanes, conflict reconciliation and the blob lane. Use when building a field app without the React UIKit, or when debugging sync.
 license: "MIT"
-compatibility: "kaafil-js ^0.1.0-beta.7"
+compatibility: "kaafil-js ^0.5.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"

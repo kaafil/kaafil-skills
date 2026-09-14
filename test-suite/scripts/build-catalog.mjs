@@ -45,8 +45,8 @@ try {
   process.exit(1);
 }
 
-/** The five subpaths the UIKit publishes that carry types. `/styles` is CSS. */
-const UIKIT_SUBPATHS = ['core', 'manager', 'admin', 'traveller', 'testing'];
+/** The six subpaths the UIKit publishes that carry types. `/styles` is CSS. */
+const UIKIT_SUBPATHS = ['core', 'manager', 'admin', 'traveller', 'testing', 'offline'];
 
 function fail(message) {
   console.error(`\n  ${message}\n`);

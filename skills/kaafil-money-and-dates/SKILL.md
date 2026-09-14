@@ -2,7 +2,7 @@
 name: kaafil-money-and-dates
 description: Handling amounts and time in Kaafil — every amount is an integer count of paise in a *Minor field, and "now" is always meta.serverTime rather than the device clock. Read before rendering or computing any money value or timestamp.
 license: "MIT"
-compatibility: "kaafil-js ^0.1.0-beta.7; kaafil-react-uikit ^0.1.0-beta.1"
+compatibility: "kaafil-js ^0.5.0; kaafil-react-uikit ^0.9.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"

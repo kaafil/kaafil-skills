@@ -2,7 +2,7 @@
 name: kaafil-concepts
 description: The Kaafil mental model — what the product does, the trip-to-journey pipeline, the scoping hierarchy (tenant, agency, trip), capabilities, and the vocabulary (ref vs id, trip vs trek, manifest, close-out). Read this before any other Kaafil skill.
 license: "MIT"
-compatibility: "kaafil-js ^0.1.0-beta.7; kaafil-react-uikit ^0.1.0-beta.1"
+compatibility: "kaafil-js ^0.5.0; kaafil-react-uikit ^0.9.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"

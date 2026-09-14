@@ -2,7 +2,7 @@
 name: kaafil-errors
 description: How Kaafil refuses — the error envelope, branching on error.code rather than the HTTP status, the typed error subclasses, which failures are safe to retry, and the 423 close-out lock that has no override. Read when anything fails.
 license: "MIT"
-compatibility: "kaafil-js ^0.1.0-beta.7"
+compatibility: "kaafil-js ^0.5.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"

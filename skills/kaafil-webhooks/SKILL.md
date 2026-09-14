@@ -2,7 +2,7 @@
 name: kaafil-webhooks
 description: Reacting to Kaafil events from your backend — the events feed, webhook deliveries and replay, testing an endpoint, and writing a handler that is safe against duplicates and out-of-order delivery.
 license: "MIT"
-compatibility: "Node.js >=18; kaafil-js ^0.1.0-beta.7"
+compatibility: "Node.js >=18; kaafil-js ^0.5.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"

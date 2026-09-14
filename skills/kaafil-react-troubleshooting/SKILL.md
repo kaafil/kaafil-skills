@@ -2,7 +2,7 @@
 name: kaafil-react-troubleshooting
 description: Diagnosing a broken Kaafil React integration — nothing is styled, the list is empty, a share section is missing, writes vanish, a 403 on every read, hydration errors, the module has no exports. Symptom-first, with the real cause for each.
 license: "MIT"
-compatibility: "kaafil-react-uikit ^0.1.0-beta.1; kaafil-js ^0.1.0-beta.7"
+compatibility: "kaafil-react-uikit ^0.9.0; kaafil-js ^0.5.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"

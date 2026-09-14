@@ -2,7 +2,7 @@
 name: kaafil-js-pagination
 description: Reading long lists from Kaafil — cursor pages versus delta reads with ?since=, why most trip lists are not paginated at all, the KaafilPaginator, and the usePaginatedList hook. Use for "page through", "load more", "too many results".
 license: "MIT"
-compatibility: "kaafil-js ^0.1.0-beta.7; kaafil-react-uikit ^0.1.0-beta.1"
+compatibility: "kaafil-js ^0.5.0; kaafil-react-uikit ^0.9.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"

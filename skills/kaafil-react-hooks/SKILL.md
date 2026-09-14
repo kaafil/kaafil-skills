@@ -2,7 +2,7 @@
 name: kaafil-react-hooks
 description: The kaafil-react-uikit/core hook layer — 56 headless hooks shared by all three families, session and persona, capabilities, snapshot reads, mutations, and the rules that keep one hook per domain. Use when building custom UI on Kaafil data.
 license: "MIT"
-compatibility: "React >=18.2 <20; kaafil-react-uikit ^0.1.0-beta.1"
+compatibility: "React >=18.2 <20; kaafil-react-uikit ^0.9.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"

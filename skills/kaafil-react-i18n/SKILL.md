@@ -2,7 +2,7 @@
 name: kaafil-react-i18n
 description: Locale and text direction in kaafil-react-uikit — the locale prop, the bundled chrome catalogs, why the host supplies the locale rather than the kit sniffing it, and RTL. Use for "add a language", "translate the UI", "Arabic support".
 license: "MIT"
-compatibility: "kaafil-react-uikit ^0.1.0-beta.1"
+compatibility: "kaafil-react-uikit ^0.9.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"

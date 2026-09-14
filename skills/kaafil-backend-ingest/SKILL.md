@@ -2,7 +2,7 @@
 name: kaafil-backend-ingest
 description: Pushing trips from your CRM into Kaafil — the upsert lane, why sourceUpdatedAt is required, echoing a trip back, cancelling, bulk pushes, and waiting for the journey to build. Use for "ingest trips", "sync our CRM", "create a trip".
 license: "MIT"
-compatibility: "Node.js >=18; kaafil-js ^0.1.0-beta.7"
+compatibility: "Node.js >=18; kaafil-js ^0.5.0"
 metadata:
   author: "Kaafil"
   version: "0.1.0"

@@ -29,6 +29,11 @@ declare const agencyAdminRef: string;
 // ── the host's own plumbing, whatever it happens to be ──────────────────────
 declare const router: { push: (href: string) => void; replace: (href: string) => void };
 declare const analytics: { track: (event: string, payload?: Record<string, unknown>) => void };
+/** The host's own notification. Used by the completion-hook examples
+ * (`onLogExpense`, `onCollectPayment`) whose whole point is that the write has
+ * ALREADY happened — routing to a form from one of those would give a manager
+ * two forms for one expense, so the fences must not show a `router.push`. */
+declare function toast(message: string): void;
 /** Stands in for "whatever Kaafil call this example is about". */
 declare function doSomething(): Promise<unknown>;
 declare function mintTokens(): Promise<{
